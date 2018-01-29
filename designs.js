@@ -1,8 +1,6 @@
-// Select color input
-// Select size input
+//JQuery for Jeff Choate's Pixel Maker Project
 
 // When size is submitted by the user, call makeGrid()
-
 function makeGrid() {
 // Your code goes here!
 	let parentCanvas = $('#pixelCanvas');
@@ -20,8 +18,8 @@ function makeGrid() {
 
 	//add column cells
 	let width = $('#inputWidth').val();
-	for(var column = 0; column < width; column++ ){
-			$('tr').append(columnHTML);
+	for(var column = 0; column < width; column++){
+		$('tr').append(columnHTML);
 	}
 	console.log($('#inputHeight').val() + '  '+ $('#inputWidth').val());
 }
@@ -29,11 +27,10 @@ function makeGrid() {
 $('#addGrid').on('click', function(evt){
 	evt.preventDefault();
 	makeGrid();
-	console.log('Finished addGRid call');
+	console.log('Finished addGrid call');
 });
 
 //colorize a cell
 $('#pixelCanvas').on('click','td', function(evt){
 	$(this).css('background', $("#colorPicker").val());
-	//console.log($("#colorPicker").val());
 });
