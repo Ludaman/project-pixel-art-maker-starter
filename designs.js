@@ -31,3 +31,9 @@ $('#addGrid').on('click', function(evt){
 	makeGrid();
 	console.log('Finished addGRid call');
 });
+
+//colorize a cell
+$('#pixelCanvas').on('click','td', function(evt){
+	$(this).css('background', $("#colorPicker").val());
+	//console.log($("#colorPicker").val());
+});
